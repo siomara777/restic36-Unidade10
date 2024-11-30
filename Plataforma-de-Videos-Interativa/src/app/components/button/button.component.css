@@ -1,0 +1,30 @@
+button {
+  display: flex;
+  align-items: center;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  background: none;
+  transition: 0.2s;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.primary {
+  gap: .5rem;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: var(--purple-primary-color);
+  border-radius: 8px;
+  padding: 8px 20px;
+}
+
+.primary:disabled {
+  cursor: not-allowed;
+}
+
+.default {
+
+}

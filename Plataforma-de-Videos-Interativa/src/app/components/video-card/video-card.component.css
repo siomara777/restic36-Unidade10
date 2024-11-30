@@ -1,0 +1,140 @@
+.video-card-container {
+  display: flex;
+}
+
+.video-card-container:hover {
+  cursor: pointer;
+}
+
+.video-thumbnail {
+  display: flex;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.video-thumbnail img {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.video-thumbnail img:hover {
+  opacity: 0.8;
+  scale: 1.1;
+}
+
+.video-info {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+}
+
+.lg {
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+
+.lg .video-thumbnail img {
+  max-width: 300px;
+  height: auto;
+}
+
+.lg .video-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.lg .video-info .video-title {
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--zinc-main-text-color);
+}
+
+.lg .video-info p {
+  font-size: 16px;
+  font-weight: 300;
+  color: var(--zinc-secundary-text-color);
+}
+
+.md {
+  flex-direction: column;
+  gap: .5rem;
+}
+
+.md.video-card-container {
+  max-width: 350px;
+  height: auto;
+}
+
+.md .video-thumbnail img {
+  max-width: 350px;
+  height: auto;
+}
+
+.md .video-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.md .video-info .video-title {
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--zinc-main-text-color);
+}
+
+.md .video-info p {
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--zinc-secundary-text-color);
+}
+
+.sm {
+  width: 100%;
+  max-width: 400px;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.sm.video-card-container {
+  width: 100%;
+  height: auto;
+  max-height: 150px;
+}
+
+.sm .video-thumbnail img {
+  max-width: 200px;
+  height: auto;
+}
+
+.sm .video-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.sm .video-info .video-title {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--zinc-main-text-color);
+  max-height: 2.6rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+  margin-bottom: 4px;
+}
+
+.sm .video-info p {
+  font-size: 12px;
+  font-weight: 300;
+  color: var(--zinc-secundary-text-color);
+  max-height: 1.8rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: normal;
+}

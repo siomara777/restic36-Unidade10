@@ -1,0 +1,32 @@
+:root {
+    --zinc-bg-color: #023b17;
+    --zinc-secundary-color: #9bd1af;
+    --zinc-main-text-color: #F4F4F5;
+    --zinc-secundary-text-color: #aaa6a1;
+    --purple-primary-color: #9864F2;
+    --purple-secundary-color: #7E3AF2;
+  
+    --default-box-shadow: 0px 8px 8px 0px rgba(0, 0, 0, 0.10), 0px 4px 4px 0px rgba(0, 0, 0, 0.10), 0px 2px 2px 0px rgba(0, 0, 0, 0.10), 0px 0px 0px 1px rgba(0, 0, 0, 0.10), 0px 0px 0px 1px rgba(255, 255, 255, 0.03) inset, 0px 1px 0px 0px rgba(255, 255, 255, 0.03) inset;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  body {
+    color: #ffffff;
+    background-color: var(--zinc-bg-color);
+    font-family: 'Inter', sans-serif;
+    width: 100vw;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  

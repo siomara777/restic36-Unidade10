@@ -1,0 +1,27 @@
+<div class="content">
+  <h2 class="search-result-header">Resultado da busca por: "<span>{{ query }}</span>"</h2>
+
+  <div class="filter-options-container">
+    <p class="filter">
+      <img src="../../../assets/icons/filter.svg" alt="">
+      Filtrar:
+    </p>
+  </div>
+
+  <div class="videos-container">
+    @for (video of videos; track video.id) {
+      <app-video-card
+        size="lg"
+        [id]="video.id"
+        [title]="video.title"
+        [description]="video.description"
+        [url]="video.url"
+        [thumbnail]="video.thumbnail"
+        [views]="video.views"
+        [uploadedAt]="video.uploadedAt"
+      >
+      </app-video-card>
+    }
+  </div>
+
+</div>

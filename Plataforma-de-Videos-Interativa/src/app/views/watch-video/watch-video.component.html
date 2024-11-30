@@ -1,0 +1,79 @@
+<div class="content">
+  <main>
+    <div class="video-container">
+      <iframe width="100%" height="100%" [src]="safeVideoUrl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+
+    <div class="video-info-container">
+      <h2>{{ currentVideo.title }}</h2>
+      <div class="info">
+        <div class="stats">
+          <p>Publicado em {{ currentVideo.uploadedAt | date: 'dd/MM/yyyy' }}</p>
+          <p>{{ currentVideo.views }} visualizações</p>
+        </div>
+
+        <div class="options-container">
+          <p
+            class="option"
+            (click)="toggleInteraction('likes')"
+          >
+            @if (isLiked) {
+              <img src="../../../assets/icons/liked.svg" alt="">
+            } @else {
+              <img src="../../../assets/icons/not-liked.svg" alt="">
+            }
+            {{ likes }}
+          </p>
+          <p
+            class="option"
+            (click)="toggleInteraction('favorites')"
+          >
+            @if (isFavorited) {
+              <img src="../../../assets/icons/favorite.svg" alt="">
+            } @else {
+              <img src="../../../assets/icons/not-favorite.svg" alt="">
+            }
+            Favoritar
+          </p>
+          <p
+            class="option"
+            (click)="toggleInteraction('watchLater')"
+          >
+            @if (isWatchLater) {
+              <img src="../../../assets/icons/watch-later.svg" alt="">
+            } @else {
+              <img src="../../../assets/icons/not-watch-later.svg" alt="">
+            }
+            Assistir depois
+          </p>
+          <p class="option">
+            <img src="../../../assets/icons/share.svg" alt="">
+            Compartilhar
+          </p>
+        </div>
+
+      </div>
+
+      <p class="description">{{ currentVideo.description }}</p>
+    </div>
+  </main>
+
+  <aside>
+    <h3>Mais vídeos</h3>
+    <div class="more-videos-container">
+      @for (video of videos; track video.id) {
+        <app-video-card
+          size="sm"
+          [id]="video.id"
+          [title]="video.title"
+          [description]="video.description"
+          [url]="video.url"
+          [thumbnail]="video.thumbnail"
+          [views]="video.views"
+          [uploadedAt]="video.uploadedAt"
+        >
+        </app-video-card>
+      }
+    </div>
+  </aside>
+</div>

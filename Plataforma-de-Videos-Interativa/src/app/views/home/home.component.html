@@ -1,0 +1,46 @@
+<div class="content">
+  <h1 class="greeting">Bem vindo, <span class="username">Usuário</span>!</h1>
+
+  <div class="category-selector-container">
+    <a
+      class="category-option"
+      [class.selected]="selectedCategory === 'default'"
+      (click)="selectCategory('default')"
+    >
+      Vídeo populares
+    </a>
+    <a
+      class="category-option"
+      [class.selected]="selectedCategory === 'favoritos'"
+      (click)="selectCategory('favoritos')"
+    >
+      Vídeo favoritos
+    </a>
+    <a
+      class="category-option"
+      [class.selected]="selectedCategory === 'assistir-depois'"
+      (click)="selectCategory('assistir-depois')"
+    >
+      Assistir mais tarde
+    </a>
+  </div>
+
+  <div class="videos-container">
+    @if (filteredVideos.length === 0) {
+      <p class="no-videos-message">Nenhum vídeo encontrado.</p>
+    } @else {
+      @for (video of filteredVideos; track video.id) {
+        <app-video-card
+          [id]="video.id"
+          [title]="video.title"
+          [description]="video.description"
+          [url]="video.url"
+          [thumbnail]="video.thumbnail"
+          [views]="video.views"
+          [uploadedAt]="video.uploadedAt"
+        >
+        </app-video-card>
+      }
+    }
+  </div>
+</div>

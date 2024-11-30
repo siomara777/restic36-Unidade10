@@ -1,0 +1,27 @@
+:host {
+  width: 100%;
+  max-width: 720px;
+  padding: 0 1rem;
+}
+
+.search-bar {
+  width: 100%;
+  padding: 10px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--zinc-secundary-color);
+  border-radius: 10px;
+  box-shadow: var(--default-box-shadow);
+}
+
+.search-bar input {
+  display: flex;
+  flex: 1;
+  width: 100%;
+  outline: none;
+  border: none;
+  background-color: var(--zinc-secundary-color);
+  color: #9864F2;
+  font-size: 16px;
+}
