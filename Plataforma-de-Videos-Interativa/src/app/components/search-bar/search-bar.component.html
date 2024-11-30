@@ -1,0 +1,18 @@
+<form
+  class="search-bar"
+  (submit)="searchVideo($event)"
+>
+  <input
+    type="text"
+    name="video-title"
+    id="video-title"
+    placeholder="Buscar vídeo"
+    [formControl]="queryControl"
+  >
+  <app-button
+    label="Buscar"
+    type="submit"
+  >
+    <img src="../../../assets/icons/arrow-right.svg" alt="">
+  </app-button>
+</form>
